@@ -1,0 +1,5 @@
+/* OVERRIDES */
+
+nav.navbar.bootsnav ul.nav > li > a:after {
+  content: '' !important;
+}
