@@ -21,7 +21,12 @@ header .navbar.sticky-header {
 }
 
 @media (max-width: 992px) {
-  header .navbar {
+  header .navbar,
+  header .navbar.sticky-header {
     height: 68px !important;
+  }
+  #navbar-menu {
+    margin-top: 20px;
+    width: 100% !important;
   }
 }
