@@ -1,5 +1,6 @@
-console.log('Works!');
-
+/*
+* Window.
+*/
 (function(win, doc) {
   var trackingButton = doc.querySelector('.tracking');
   function onTrackingClick() {
