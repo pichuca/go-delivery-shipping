@@ -20,6 +20,11 @@ header .navbar.sticky-header {
   height: inherit !important;
 }
 
+.footer-info .footer-logo {
+  color: #FFFFFF;
+  font-weight: 300;
+}
+
 @media (max-width: 992px) {
   header .navbar,
   header .navbar.sticky-header {
