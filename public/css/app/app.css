@@ -54,6 +54,34 @@ i,
   background: rgba(32, 114, 190) !important;
 }
 
+.footer-social a:hover {
+  background: rgba(32, 114, 190) !important;
+}
+
+.footer-social a:hover ,
+.footer-social a:hover i {
+  color: #FFFFFF !important;
+}
+
+.contactinfo-single h3,
+.contactus .section-title p,
+.btn-contact {
+  color: rgba(32, 114, 190) !important;
+}
+
+.contactinfo-single i {
+  border: 1px solid rgba(32, 114, 190) !important;
+}
+
+.btn-contact {
+  border: 2px solid rgba(32, 114, 190) !important;
+}
+
+.btn-contact:hover {
+  background: rgba(32, 114, 190) !important;
+  color: #FFFFFF !important;
+}
+
 /* end color overrides */
 
 nav.navbar.bootsnav ul.nav > li > a:after {
