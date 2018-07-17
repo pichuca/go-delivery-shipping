@@ -114,6 +114,9 @@ header .navbar.sticky-header {
   header .navbar.sticky-header {
     height: 68px !important;
   }
+  header .navbar-header i {
+    color: #FFFFFF !important;
+  }
   #navbar-menu {
     margin-top: 20px;
   }
