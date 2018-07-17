@@ -1,5 +1,35 @@
 /* OVERRIDES */
 
+/* Main Color override */
+.banner:before {
+  background: rgba(32, 114, 190, 0.9) !important;
+}
+
+.preloader,
+nav.navbar.bootsnav.sticky-header,
+.jumptotop a  {
+  background: rgba(32, 114, 190) !important; /* with no background opacity. */
+}
+
+.header-content h2 span,
+i {
+  color: rgba(32, 114, 190) !important;
+}
+
+.icon-box {
+  border: 1px solid rgba(32, 114, 190) !important;
+}
+
+.feature-single:hover .icon-box {
+  background: #EEEEEE;
+}
+
+.jumptotop a i {
+  color: #FFFFFF !important;
+}
+
+/* end color overrides */
+
 nav.navbar.bootsnav ul.nav > li > a:after {
   content: '' !important;
 }
