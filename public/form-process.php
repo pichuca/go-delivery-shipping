@@ -22,7 +22,7 @@
 	} else {
 		$subject = $_POST["subject"];
 	}
-	
+
 	// MESSAGE
 	if (empty($_POST["message"])) {
 		$errorMSG .= "Message is required. ";
@@ -30,7 +30,7 @@
 		$message = $_POST["message"];
 	}
 
-	$EmailTo = "demo@awaiken.com"; // Replace with your email.
+	$EmailTo = "s.roibon@gmail.com"; // Replace with your email.
 
 	// prepare email body text
 	$Body = "";
