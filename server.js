@@ -45,7 +45,7 @@ app.post('/sendContactForm', function(req, res) {
     html: `${req.body.name} (${req.body.email}) says: ${req.body.message}`
   };
 
-  transporter.sendMail(mailOptions, function(err, info) {
+  smtpTrans.sendMail(mailOptions, function(err, info) {
     if (err) {
       console.log(`Error while sending an email: ${err}`);
     } else {
