@@ -15,23 +15,43 @@ app.get('/tracking', function(req, res) {
 
 // Send contact form email.
 app.post('/sendContactForm', function(req, res) {
-  console.log('Sending email!!');
+  console.log('Sending email...');
   console.log(req.body);
   res.send('Handle contact form. Work in progress.');
 
-  // const mailOptions = {
-  //   from: 's.roibon@gmail.com',
-  //   to: 's.roibon@gmail.com',
-  //   subject: 'Test form We Carry.',
-  //   html: '<h1>Contact form Test We carry.</h1>'
-  // };
-  // transporter.sendMail(mailOptions, function(err, info) {
-  //   if (err) {
-  //     console.log(err);
-  //   } else {
-  //     console.log(info);
-  //   }
-  // });
+  // Request body.
+  /*
+    {
+      name,
+      email,
+      subject,
+      message
+    }
+  */
+  const requestBody = req.body;
+  const smtpTrans = nodemailer.createTransport({
+    host: 'smtp.gmail.com',
+    port: 465,
+    secure: true,
+    auth: {
+      user: 's.roibon@gmail.com',
+      pass: 's4lv4d0r82'
+    }
+  });
+  const mailOptions = {
+    from: req.body.name + ' &lt;' + req.body.email + '&gt;',
+    to: 's.roibon@gmail.com',
+    subject: 'We Carry formulario de contacto.',
+    html: `${req.body.name} (${req.body.email}) says: ${req.body.message}`
+  };
+
+  transporter.sendMail(mailOptions, function(err, info) {
+    if (err) {
+      console.log(`Error while sending an email: ${err}`);
+    } else {
+      console.log(`Email sent. info: ${info}`);
+    }
+  });
 });
 
 console.log(`App server running on  port: ${port}`);
